@@ -2,6 +2,8 @@ library home;
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_tracking/repository/repository.dart';
+import 'package:getx_tracking/resource/app_pages.dart';
 import '../module.dart';
 
 part './home_controller.dart';

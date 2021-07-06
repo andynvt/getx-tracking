@@ -6,6 +6,12 @@ class _HomeScreen extends GetView<_HomeController> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home'),
+        actions: [
+          IconButton(
+            onPressed: controller.onSignOut,
+            icon: Icon(Icons.logout_outlined),
+          ),
+        ],
       ),
     );
   }

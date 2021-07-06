@@ -67,4 +67,13 @@ class UserRepository {
       callback?.call(false, e.message);
     }
   }
+
+  void signOut(Function(bool, String?)? callback) async {
+    try {
+      await auth.signOut();
+      callback?.call(true, '');
+    } on FirebaseAuthException catch (e) {
+      callback?.call(false, e.message);
+    }
+  }
 }
