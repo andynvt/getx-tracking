@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:getx_tracking/modules/modules.dart';
+import 'package:getx_tracking/module/module.dart';
 part './app_routes.dart';
 
 class AppPages {

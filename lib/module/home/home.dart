@@ -2,7 +2,7 @@ library home;
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_tracking/modules/base/base_controller.dart';
+import '../module.dart';
 
 part './home_controller.dart';
 part './home_screen.dart';
