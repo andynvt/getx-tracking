@@ -1,10 +1,20 @@
 part of sign_in;
 
 class _SignInController extends BaseController {
-  RxInt counter = 0.obs;
+  final TextEditingController usernameController = TextEditingController(text: '123');
+  final TextEditingController pwdController = TextEditingController(text: '123');
 
-  void increase() {
-    counter++;
-    Get.to(Routes.HOME);
+  String get username => usernameController.text;
+  String get password => pwdController.text;
+
+  void onSignIn() {
+    print('$username - $password');
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    usernameController.dispose();
+    pwdController.dispose();
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:getx_tracking/res/res.dart';
 import 'package:getx_tracking/services/cache/cache_service.dart';
@@ -12,11 +13,12 @@ void main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.SIGN_IN,
-      defaultTransition: Transition.cupertino,
+      defaultTransition: Transition.fadeIn,
       getPages: AppPages.pages,
+      initialRoute: Routes.SPLASH,
       initialBinding: SplashBinding(),
       home: createSplash,
+      builder: EasyLoading.init(),
     ),
   );
 }

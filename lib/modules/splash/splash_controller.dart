@@ -7,11 +7,15 @@ class _SplashController extends BaseController {
     checkLogin();
   }
 
-  void checkLogin() {
+  void checkLogin() async {
+    easyLoading(true);
+    await Future.delayed(Duration(seconds: 1));
+    easyLoading(false);
     if (cacheSrv.accessToken.isEmpty) {
-      Get.toNamed(Routes.SIGN_IN);
+      // Get.toNamed(Routes.SIGN_IN);
+      Get.offAllNamed(Routes.SIGN_IN);
     } else {
-      Get.toNamed(Routes.HOME);
+      Get.offAllNamed(Routes.HOME);
     }
   }
 }
