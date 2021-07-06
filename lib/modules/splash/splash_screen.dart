@@ -1,6 +1,6 @@
-part of home;
+part of splash;
 
-class _HomeScreen extends GetView<_HomeController> {
+class _SplashScreen extends GetView<_SplashController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
