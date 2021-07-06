@@ -13,6 +13,15 @@ class _HomeScreen extends GetView<_HomeController> {
           ),
         ],
       ),
+      body: GoogleMap(
+        initialCameraPosition: CameraPosition(
+          target: LatLng(45.521563, -122.677433),
+          zoom: 14.4746,
+        ),
+        onMapCreated: (c) {
+          controller.controller = c;
+        },
+      ),
     );
   }
 }
