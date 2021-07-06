@@ -13,15 +13,31 @@ class _HomeScreen extends GetView<_HomeController> {
           ),
         ],
       ),
-      body: GoogleMap(
-        initialCameraPosition: CameraPosition(
-          target: LatLng(45.521563, -122.677433),
-          zoom: 14.4746,
+      body: GetBuilder<_HomeController>(builder: (_) {
+        return GoogleMap(
+          mapType: MapType.normal,
+          initialCameraPosition: CameraPosition(
+            target: _.position,
+            zoom: Const.defaultZoom,
+          ),
+          circles: Set.of(_.circle != null ? [_.circle!] : []),
+          markers: Set.of(_.marker != null ? [_.marker!] : []),
+          onMapCreated: (c) {
+            controller.controller = c;
+          },
+        );
+      }),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 32),
+        child: FloatingActionButton(
+          onPressed: controller.onStartMoving,
+          child: Icon(
+            Icons.run_circle_outlined,
+            size: 50,
+          ),
         ),
-        onMapCreated: (c) {
-          controller.controller = c;
-        },
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
     );
   }
 }
