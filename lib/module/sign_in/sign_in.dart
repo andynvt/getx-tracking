@@ -3,7 +3,6 @@ library sign_in;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_tracking/module/module.dart';
-import 'package:getx_tracking/res/app_pages.dart';
 
 part './sign_in_controller.dart';
 part './sign_in_screen.dart';

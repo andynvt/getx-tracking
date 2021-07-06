@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:getx_tracking/res/res.dart';
+import 'package:getx_tracking/resource/resource.dart';
 import 'package:getx_tracking/service/cache/cache_service.dart';
 import 'module/module.dart';
 
