@@ -18,12 +18,16 @@ class _SignInController extends BaseController {
         if (isOK) {
           Get.offAllNamed(Routes.HOME);
         } else {
-          Get.showSnackbar(
-            GetBar(
-              message: e,
-              isDismissible: true,
-              duration: Duration(seconds: 2),
+          Get.dialog(
+            Center(
+              child: Container(
+                color: Colors.white,
+                margin: const EdgeInsets.all(32),
+                padding: const EdgeInsets.all(16),
+                child: Text(e ?? ''),
+              ),
             ),
+            barrierDismissible: true,
           );
         }
       },
