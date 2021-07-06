@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "151111692449",
+    "project_id": "getx-tracking",
+    "storage_bucket": "getx-tracking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151111692449:android:89a37675a6bfcd7a5b40e0",
+        "android_client_info": {
+          "package_name": "com.example.getx_tracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151111692449-6f0oba3ql1kg5v99uq40lnc9ccfadjji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWQ4MhwP_4ejx91tAKJWooF2cMZrlxPhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151111692449-6f0oba3ql1kg5v99uq40lnc9ccfadjji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

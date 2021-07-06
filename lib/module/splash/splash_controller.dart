@@ -11,7 +11,7 @@ class _SplashController extends BaseController {
     easyLoading(true);
     await Future.delayed(Duration(seconds: 1));
     easyLoading(false);
-    if (cacheSrv.accessToken.isEmpty) {
+    if (!cacheSrv.isSignedIn) {
       // Get.toNamed(Routes.SIGN_IN);
       Get.offAllNamed(Routes.SIGN_IN);
     } else {

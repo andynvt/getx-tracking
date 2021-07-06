@@ -7,7 +7,6 @@ class _HomeScreen extends GetView<_HomeController> {
       appBar: AppBar(
         title: Text('Home'),
       ),
-      backgroundColor: Colors.blue,
     );
   }
 }

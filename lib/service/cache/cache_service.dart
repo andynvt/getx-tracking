@@ -26,6 +26,6 @@ class CacheService {
     _box = await Hive.openBox('cache');
   }
 
-  String get accessToken => _box!.get('accessToken', defaultValue: '');
-  set accessToken(String? token) => _box!.put('accessToken', token ?? '');
+  bool get isSignedIn => _box!.get('isSignedIn') ?? false;
+  set accessToken(bool? isSignedIn) => _box!.put('isSignedIn', isSignedIn ?? false);
 }
